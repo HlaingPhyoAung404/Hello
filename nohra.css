@@ -1,0 +1,132 @@
+
+
+@import url("https://fonts.googleapis.com/css?family=Darker+Grotesque|Poppins|Raleway|Quicksand&display=swap");
+body {
+  background: black;
+  color: rgb(108, 172, 255);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.container {
+  position: absolute;
+  height: 150pt;
+  width: 280pt;
+  background: url("https://i.pinimg.com/originals/9e/35/12/9e3512f7e3ea4aedc62c766d7eae0b58.gif");
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  top: 50pt;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+#todate {
+  position: absolute;
+  font-size: 60px;
+  top: 15px;
+  left: 10pt;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+}
+#tomonthyear {
+  font-size: 33px;
+  font-family: "Darker Grotesque", sans-serif;
+  position: absolute;
+  top: 35pt;
+  right: 9pt;
+  z-index: 2;
+}
+.BG {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(5px);
+}
+.calendar {
+  position: absolute;
+  height: 270pt;
+  width: 280pt;
+  background: -webkit-linear-gradient(rgb(99, 161, 255),rgb(0, 32, 136));
+  border-radius: 0 0 15px 15px;
+  margin: auto;
+  top: 200pt;
+  left: 0;
+  z-index: 2;
+  right: 0;
+}
+.shade {
+  position: absolute;
+  height: 200pt;
+  width: 400pt;
+  background: rgb(99, 161, 255);
+  filter: blur(40px);
+  bottom: -96%;
+}
+#calendates {
+  text-shadow: none;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 10pt;
+  border-collapse: collapse;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+}
+th {
+  color: rgb(71, 255, 169);
+  font-family: "Darker Grotesque", sans-serif;
+}
+td:nth-child(1),
+td:nth-child(7) {
+  color: rgb(241, 255, 115);
+}
+td {
+  text-align: center;
+  width: 48px;
+}
+tr {
+  height: 50px;
+}
+#p {
+  position: absolute;
+  height: 20px;
+  top: -1.5pc;
+  left: 0;
+  width: 20px;
+  background: transparent;
+  filter: invert(1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#n {
+  position: absolute;
+  background: transparent;
+  border: none;
+  height: 20px;
+  top: -1.5pc;
+  width: 20px;
+  right: 15px;
+  filter: invert(1);
+  cursor: pointer;
+  outline: none;
+}
+.monthyear {
+  position: absolute;
+  top: -2pc;
+  right:0;left:0;
+  font-weight: 800;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Darker Grotesque", sans-serif;
+  transform-origin: center;
+}
+

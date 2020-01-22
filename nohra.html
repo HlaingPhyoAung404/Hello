@@ -1,0 +1,146 @@
+<!-- Created by nohra-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="Calendar.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="todate">31</h1>
+      <h2 id="tomonthyear">July, 2019</h2>
+      <div class="shade"></div>
+    </div>
+    <div class="calendar">
+      <table id="calendates" a>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <tr>
+          <td id="d1"></td>
+          <td id="d2"></td>
+          <td id="d3"></td>
+          <td id="d4"></td>
+          <td id="d5"></td>
+          <td id="d6"></td>
+          <td id="d7"></td>
+        </tr>
+        <tr>
+          <td id="d8"></td>
+          <td id="d9"></td>
+          <td id="d10"></td>
+          <td id="d11"></td>
+          <td id="d12"></td>
+          <td id="d13"></td>
+          <td id="d14"></td>
+        </tr>
+        <tr>
+          <td id="d15"></td>
+          <td id="d16"></td>
+          <td id="d17"></td>
+          <td id="d18"></td>
+          <td id="d19"></td>
+          <td id="d20"></td>
+          <td id="d21"></td>
+        </tr>
+        <tr>
+          <td id="d22"></td>
+          <td id="d23"></td>
+          <td id="d24"></td>
+          <td id="d25"></td>
+          <td id="d26"></td>
+          <td id="d27"></td>
+          <td id="d28"></td>
+        </tr>
+        <tr>
+          <td id="d29"></td>
+          <td id="d30"></td>
+          <td id="d31"></td>
+          <td id="d32"></td>
+          <td id="d33"></td>
+          <td id="d34"></td>
+          <td id="d35"></td>
+        </tr>
+        <tr>
+          <td id="d36"></td>
+          <td id="d37"></td>
+          <td id="d38"></td>
+          <td id="d39"></td>
+          <td id="d40"></td>
+          <td id="d41"></td>
+          <td id="d42"></td>
+        </tr>
+      </table>
+
+      <center><div class="monthyear">July, 2019</div></center>
+      <button onclick="p()" id="p"><img src="https://image.flaticon.com/icons/svg/60/60758.svg" style="height: 20px;transform: rotate(180deg);"></button
+      ><button onclick="n()" id="n" ><img src="https://image.flaticon.com/icons/svg/60/60758.svg" style="height: 20px;"></button>
+    </div>
+    <img
+      src="https://i.pinimg.com/originals/9e/35/12/9e3512f7e3ea4aedc62c766d7eae0b58.gif"
+      class="BG"
+    />
+    <script>
+    var day ;
+var month = new Date().getMonth()-1;
+var year = new Date().getFullYear();
+function setCalendar() {
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  const date = new Date(year, month+1, 1);
+  document.querySelector("#todate").innerHTML = new Date().getDate();
+  document.querySelector("#tomonthyear").innerHTML = days[new Date().getDay()];
+  var j = 1;
+  for (var i = 1; i <= 42; i++) {
+    document.getElementById("d" + i).innerHTML = "";
+  }
+  for (var i = date.getDay()+1 ; j <= new Date(year, month+2, 0).getDate(); i++) {
+    if(new Date().getDate()===j&&new Date().getMonth()==month+1)
+    document.getElementById("d" + i).innerHTML ='<u>' + j + '</u>';
+    else
+    document.getElementById("d" + i).innerHTML = j;
+    j++;
+  }
+  document.querySelector('.monthyear').innerHTML = months[date.getMonth()]+', '+date.getFullYear();
+}
+window.onload = setCalendar();
+function p() {
+  month--;
+  setCalendar();
+}
+function n() {
+  month++;
+  setCalendar();
+}
+</script>
+  </body>
+</html>
